@@ -10,7 +10,7 @@ pipeline {
             steps {
 
                 echo "this is stage one "
-                echo name of the URL is $(ENV_URL)
+                echo "name of the URL is ${ENV_URL}"
             }
        
        }
