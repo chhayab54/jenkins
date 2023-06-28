@@ -4,7 +4,7 @@ pipeline {
     environment {
         ENV_URL = "pipeline global"
     }
-    triggers {pollSCM('H/2 * * * *')}
+    triggers { cron ('H/2 * * * *') }
     stages {
 
         stage( 'stage one ') {
