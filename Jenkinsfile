@@ -1,13 +1,16 @@
 pipeline {
 
     agent any 
-
+    environment {
+        ENV_URL = "pipeline global"
+    }
     stages {
 
         stage( 'stage one ') {
             steps {
 
                 echo "this is stage one "
+                echo name of the URL is $(ENV_URL)
             }
        
        }
