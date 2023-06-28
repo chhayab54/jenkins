@@ -4,14 +4,8 @@ pipeline {
     environment {
         ENV_URL = "pipeline global"
     }
-input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                submitter "alice,bob"
-                parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                }
-}
+    
+
   triggers { cron ('* * * 1 *')
 
   }
@@ -31,6 +25,15 @@ input {
                 
                 echo "this is stage one "
             }
+input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+}
+
         }
     stage( 'stage three ') {
             steps {
