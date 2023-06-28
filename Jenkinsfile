@@ -5,7 +5,7 @@ pipeline {
         ENV_URL = "pipeline global"
     }
 
-  triggers { cron ('*/1')
+  triggers { cron ('*/1 * * * *')
 
   }
 
