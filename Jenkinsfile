@@ -5,8 +5,7 @@ pipeline {
         ENV_URL = "pipeline global"
     }
 
-    //triggers { cron ('H/2 * * * *') }
-
+  
     stages {
 
         stage( 'stage one ') {
